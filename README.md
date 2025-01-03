@@ -1,6 +1,9 @@
 # Generate UPI QR Code
 
-This Node.js script generates a UPI QR Code for a specified payment. The QR code can be used for making payments through UPI-compatible apps.
+This Node.js script generates a UPI QR Code for a **specified** payment amount.
+**Amount** can be diynamic like getting from i.e const {amount} req.body
+The QR code can be used for making payments through UPI-compatible apps.
+QR codes that facilitate payments via Unified Payments Interface (UPI)-compatible applications like Google Pay, PhonePe, Paytm, and others.
 
 ## Prerequisites
 
@@ -30,7 +33,7 @@ const generateUPIQRCode = async () => {
   const upiData = {
     payeeVPA: 'example@upi', // UPI ID of the recipient
     payeeName: 'John Doe',   // Name of the recipient
-    amount: 100.50,          // Amount in INR this Amount can be diynamic like getting from i.e const {amount} req.body
+    amount: 100.50,          // Amount in INR **this Amount can be diynamic like getting from i.e const {amount} req.body**
     transactionNote: 'Payment for services' // Optional note
   };
 
